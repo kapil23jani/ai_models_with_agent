@@ -112,9 +112,10 @@ const KisanAssistant = () => {
           <div className="relative flex flex-col items-center">
             <div
               className={`absolute inset-0 rounded-full pointer-events-none ${
-                listening ? "animate-glow bg-green-200/60 blur-2xl" : "bg-transparent"
+                listening
+                  ? "animate-glow bg-green-200/60 blur-2xl"
+                  : "bg-transparent"
               }`}
-              
             />
             <img
               src={AVATAR}
@@ -125,7 +126,8 @@ const KisanAssistant = () => {
               style={{
                 filter: "drop-shadow(0 0 60px #00eaff66)",
                 transition: "box-shadow 0.3s",
-                background: "linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%)",
+                background:
+                  "linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%)",
               }}
             />
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-64 h-8 rounded-full bg-gradient-to-r from-green-200/60 via-cyan-200/60 to-pink-200/60 blur-2xl opacity-80 pointer-events-none" />
@@ -156,7 +158,7 @@ const KisanAssistant = () => {
           <h2 className="text-xl font-bold text-green-900 mb-4">
             बातचीत (कृषि चैट)
           </h2>
-          <div style={{ maxHeight: 260, overflowY: "auto" }}>
+          <div style={{ overflowY: "auto" }}>
             {transcript.length === 0 ? (
               <div className="text-green-700">कोई बातचीत नहीं हुई।</div>
             ) : (

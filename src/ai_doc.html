@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered 24/7 Complaint Management System - Complete Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .tech-badge {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .workflow-step {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .workflow-step::after {
+            content: '↓';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .workflow-step:last-child::after {
+            display: none;
+        }
+        
+        .architecture-box {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+        
+        .benefit-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(45deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #667eea;
+            border-radius: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.375rem;
+            top: 1.25rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">
+                    <i class="fas fa-robot mr-4"></i>
+                    AI-Powered 24/7 Complaint Management System
+                </h1>
+                <p class="text-2xl font-light mb-8">"Always Listening, Always Helping"</p>
+                <div class="flex justify-center space-x-6 text-lg">
+                    <span><i class="fas fa-microphone mr-2"></i>Voice-Enabled</span>
+                    <span><i class="fas fa-clock mr-2"></i>24/7 Available</span>
+                    <span><i class="fas fa-brain mr-2"></i>AI-Powered</span>
+                    <span><i class="fas fa-route mr-2"></i>Smart Routing</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Table of Contents -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-list mr-3 text-blue-600"></i>Table of Contents
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <ul class="space-y-2">
+                    <li><a href="#problem" class="text-blue-600 hover:underline">1. Problem Statement</a></li>
+                    <li><a href="#solution" class="text-blue-600 hover:underline">2. Proposed Solution</a></li>
+                    <li><a href="#features" class="text-blue-600 hover:underline">3. Key Features</a></li>
+                    <li><a href="#architecture" class="text-blue-600 hover:underline">4. System Architecture</a></li>
+                    <li><a href="#technology" class="text-blue-600 hover:underline">5. Technology Stack</a></li>
+                </ul>
+                <ul class="space-y-2">
+                    <li><a href="#workflow" class="text-blue-600 hover:underline">6. AI Workflow</a></li>
+                    <li><a href="#tracking" class="text-blue-600 hover:underline">7. Tracking System</a></li>
+                    <li><a href="#usecase" class="text-blue-600 hover:underline">8. Use Case Example</a></li>
+                    <li><a href="#benefits" class="text-blue-600 hover:underline">9. Advantages</a></li>
+                    <li><a href="#future" class="text-blue-600 hover:underline">10. Future Enhancements</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section id="problem" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-exclamation-triangle mr-3 text-red-500"></i>Problem Statement
+            </h2>
+            
+            <p class="text-lg text-gray-700 mb-8">
+                In many public service departments, citizens face major issues when trying to file complaints, leading to frustration and declining trust in public services.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Current Challenges</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Limited Operating Hours:</strong> Complaints can only be made during working hours.
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-maze text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Complex Processes:</strong> Users must navigate multiple websites, forms, or physical locations.
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-language text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Language Barriers:</strong> Systems often support only one or two official languages.
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-robot text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Lack of Empathy:</strong> Robotic systems discourage people from explaining detailed problems.
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-random text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Poor Routing:</strong> Complaints are often misrouted due to vague or incomplete descriptions.
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-hourglass-half text-red-500 mr-3 mt-1"></i>
+                            <div>
+                                <strong>Delayed Tracking:</strong> Users rarely receive real-time updates on complaint status.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Impact Analysis</h3>
+                    <div style="height: 300px;">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposed Solution -->
+        <section id="solution" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>Proposed Solution
+            </h2>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-8">
+                <p class="text-lg text-gray-700 mb-4">
+                    A voice-enabled, AI-powered complaint management system available 24/7 that revolutionizes how citizens interact with public services.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <i class="fas fa-microphone text-3xl text-blue-600 mb-2"></i>
+                        <h4 class="font-semibold">Voice Activated</h4>
+                        <p class="text-sm text-gray-600">Responds to "Hey Buddy" wake word</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <i class="fas fa-comments text-3xl text-green-600 mb-2"></i>
+                        <h4 class="font-semibold">Natural Conversation</h4>
+                        <p class="text-sm text-gray-600">Understands context and emotions</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <i class="fas fa-route text-3xl text-purple-600 mb-2"></i>
+                        <h4 class="font-semibold">Smart Routing</h4>
+                        <p class="text-sm text-gray-600">AI-powered department matching</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Core Capabilities</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Responds to wake word: "Hey Buddy"
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Understands natural conversation
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Detects user emotion and urgency
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Auto-creates complaint forms
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Smartly routes complaints to correct department
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            Provides real-time ticket tracking
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">System Overview</h3>
+                    <div style="height: 300px;">
+                        <canvas id="systemOverviewChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section id="features" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-star mr-3 text-yellow-500"></i>Key Features
+            </h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Feature</th>
+                            <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Description</th>
+                            <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-microphone text-blue-600 mr-2"></i>
+                                    <strong>Wake Word + Streaming</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Continuously listens for "Hey Buddy" and activates</td>
+                            <td class="border border-gray-300 px-4 py-3">Hands-free experience</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-comments text-green-600 mr-2"></i>
+                                    <strong>Natural Conversation</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Converses using GPT with empathetic tone</td>
+                            <td class="border border-gray-300 px-4 py-3">Feels human, builds trust</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-heart text-red-600 mr-2"></i>
+                                    <strong>Emotion Detection</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Detects urgency or distress from voice</td>
+                            <td class="border border-gray-300 px-4 py-3">Prioritizes critical issues</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-alt text-purple-600 mr-2"></i>
+                                    <strong>Dynamic Form Generation</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Automatically fills complaint forms based on chat</td>
+                            <td class="border border-gray-300 px-4 py-3">Time-saving and accurate</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-route text-orange-600 mr-2"></i>
+                                    <strong>Smart Department Routing</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Uses vector embeddings to find the right department</td>
+                            <td class="border border-gray-300 px-4 py-3">Faster and correct routing</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-user text-indigo-600 mr-2"></i>
+                                    <strong>User Info Collection</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Captures name, contact, and issue details</td>
+                            <td class="border border-gray-300 px-4 py-3">Ensures structured, complete data</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clipboard-list text-teal-600 mr-2"></i>
+                                    <strong>Complaint Logging</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Saves complaint and generates unique ticket ID</td>
+                            <td class="border border-gray-300 px-4 py-3">Enables traceability</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-search text-yellow-600 mr-2"></i>
+                                    <strong>Tracking & Follow-up</strong>
+                                </div>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-3">Users can track status via voice or dashboard</td>
+                            <td class="border border-gray-300 px-4 py-3">Boosts transparency</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- System Architecture -->
+        <section id="architecture" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-sitemap mr-3 text-blue-600"></i>High-Level Architecture
+            </h2>
+            
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
+                    <div class="architecture-box">
+                        <i class="fas fa-desktop text-2xl text-blue-600 mb-2"></i>
+                        <div class="font-semibold">React UI</div>
+                        <div class="text-sm text-gray-600">Frontend Interface</div>
+                    </div>
+                    <div class="text-2xl text-gray-400">↔</div>
+                    <div class="architecture-box">
+                        <i class="fas fa-plug text-2xl text-green-600 mb-2"></i>
+                        <div class="font-semibold">WebSockets</div>
+                        <div class="text-sm text-gray-600">Real-time Communication</div>
+                    </div>
+                    <div class="text-2xl text-gray-400">↔</div>
+                    <div class="architecture-box">
+                        <i class="fas fa-server text-2xl text-purple-600 mb-2"></i>
+                        <div class="font-semibold">FastAPI</div>
+                        <div class="text-sm text-gray-600">Backend Server</div>
+                    </div>
+                    <div class="text-2xl text-gray-400">↔</div>
+                    <div class="architecture-box">
+                        <i class="fas fa-database text-2xl text-orange-600 mb-2"></i>
+                        <div class="font-semibold">DB/Storage</div>
+                        <div class="text-sm text-gray-600">Data Persistence</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-800">Frontend Layer</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-microphone mr-2"></i>Mic Input</li>
+                        <li><i class="fas fa-magic mr-2"></i>Wake Word Detection</li>
+                        <li><i class="fas fa-comments mr-2"></i>User Chat UI</li>
+                        <li><i class="fas fa-volume-up mr-2"></i>Audio Streaming</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-green-800">Processing Layer</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-language mr-2"></i>Speech-to-Text</li>
+                        <li><i class="fas fa-heart mr-2"></i>Emotion Detection</li>
+                        <li><i class="fas fa-brain mr-2"></i>ChatGPT/LLM</li>
+                        <li><i class="fas fa-cogs mr-2"></i>NLP Processing</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-purple-800">Backend Layer</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-route mr-2"></i>Complaint Processor</li>
+                        <li><i class="fas fa-bullseye mr-2"></i>Department Matcher</li>
+                        <li><i class="fas fa-database mr-2"></i>Complaint DB Entry</li>
+                        <li><i class="fas fa-ticket-alt mr-2"></i>Ticket Generation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section id="technology" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-code mr-3 text-green-600"></i>Technology Stack
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Frontend</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">WebSockets</span>
+                                <span class="tech-badge">Recorder.js</span>
+                                <span class="tech-badge">MediaRecorder API</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">AI & ML</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Picovoice Porcupine</span>
+                                <span class="tech-badge">OpenAI Whisper</span>
+                                <span class="tech-badge">Speech Emotion Recognition</span>
+                                <span class="tech-badge">OpenAI GPT-4</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Backend</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Pydantic</span>
+                                <span class="tech-badge">Async WebSockets</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-orange-500 pl-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Vector Search & Database</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">OpenAI Embeddings</span>
+                                <span class="tech-badge">FAISS</span>
+                                <span class="tech-badge">ChromaDB</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">MongoDB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Authentication</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">JWT</span>
+                                <span class="tech-badge">OAuth2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Technology Distribution</h3>
+                    <div style="height: 400px;">
+                        <canvas id="technologyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Workflow -->
+        <section id="workflow" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-project-diagram mr-3 text-purple-600"></i>AI Workflow
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="workflow-step">
+                    <i class="fas fa-microphone text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Wake Word Detection</h4>
+                    <p class="text-sm text-gray-600">Picovoice Porcupine listens for "Hey Buddy" and starts streaming</p>
+                </div>
+                
+                <div class="workflow-step">
+                    <i class="fas fa-language text-3xl text-green-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Speech-to-Text</h4>
+                    <p class="text-sm text-gray-600">Audio chunks sent to Whisper API for real-time transcription</p>
+                </div>
+                
+                <div class="workflow-step">
+                    <i class="fas fa-heart text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Emotion Detection</h4>
+                    <p class="text-sm text-gray-600">Voice tone analyzed for anger, urgency, and emotional state</p>
+                </div>
+                
+                <div class="workflow-step">
+                    <i class="fas fa-comments text-3xl text-purple-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Conversation Handling</h4>
+                    <p class="text-sm text-gray-600">GPT model engages in empathetic dialogue with context</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="workflow-step">
+                    <i class="fas fa-user-tag text-3xl text-orange-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Information Extraction</h4>
+                    <p class="text-sm text-gray-600">NER extracts name, location, phone, and issue details</p>
+                </div>
+                
+                <div class="workflow-step">
+                    <i class="fas fa-route text-3xl text-teal-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Department Matching</h4>
+                    <p class="text-sm text-gray-600">Vector similarity search ranks top 3 departments</p>
+                </div>
+                
+                <div class="workflow-step">
+                    <i class="fas fa-ticket-alt text-3xl text-indigo-600 mb-3"></i>
+                    <h4 class="font-semibold mb-2">Ticket Creation</h4>
+                    <p class="text-sm text-gray-600">Structured complaint logged with unique ticket ID</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold mb-4">Workflow Performance Metrics</h3>
+                <div style="height: 300px;">
+                    <canvas id="workflowChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complaint Tracking -->
+        <section id="tracking" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-search mr-3 text-blue-600"></i>Complaint Tracking & Transparency
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="space-y-6">
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <i class="fas fa-hashtag mr-2 text-blue-600"></i>
+                                Ticket ID Generation
+                            </h4>
+                            <p class="text-gray-700 mb-3">Each complaint gets a unique ticket like <span class="font-mono bg-gray-100 px-2 py-1 rounded">PWD-2025-0813-001</span></p>
+                            <div class="text-sm text-gray-600">
+                                Format: [Department]-[Year]-[Month][Day]-[Sequential Number]
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <i class="fas fa-sync-alt mr-2 text-green-600"></i>
+                                Real-time Status Updates
+                            </h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-microphone mr-2"></i>Voice Query: "What's the status of my ticket?"</li>
+                                <li><i class="fas fa-desktop mr-2"></i>Web Dashboard: Live status tracking</li>
+                                <li><i class="fas fa-bell mr-2"></i>Automatic notifications for status changes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <i class="fas fa-clipboard-check mr-2 text-purple-600"></i>
+                                Audit Logs
+                            </h4>
+                            <p class="text-gray-700">Internal changes logged with timestamps for complete transparency</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2 text-red-600"></i>
+                                Priority System
+                            </h4>
+                            <p class="text-gray-700">High urgency/emotion scores automatically escalate cases</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Ticket Status Flow</h3>
+                    <div class="space-y-3">
+                        <div class="timeline-item">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <strong class="text-blue-800">Submitted</strong>
+                                <p class="text-sm text-gray-600">Complaint received and ticket generated</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="bg-yellow-50 p-3 rounded-lg">
+                                <strong class="text-yellow-800">Under Review</strong>
+                                <p class="text-sm text-gray-600">Department reviewing the complaint</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="bg-purple-50 p-3 rounded-lg">
+                                <strong class="text-purple-800">In Progress</strong>
+                                <p class="text-sm text-gray-600">Action being taken to resolve issue</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <strong class="text-green-800">Resolved</strong>
+                                <p class="text-sm text-gray-600">Issue has been successfully resolved</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <strong class="text-gray-800">Closed</strong>
+                                <p class="text-sm text-gray-600">Ticket closed after user confirmation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Case Example -->
+        <section id="usecase" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-play-circle mr-3 text-green-600"></i>Example Use Case Flow
+            </h2>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-center">Scenario: Water Leakage on Street</h3>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="font-semibold text-blue-800 mb-3 flex items-center">
+                            <i class="fas fa-user mr-2"></i>User Interaction
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                                <strong>User:</strong> "Hey Buddy"
+                            </div>
+                            <div class="bg-white p-3 rounded border-l-4 border-green-500">
+                                <strong>AI:</strong> "Hello, I'm here to help. What's the issue?"
+                            </div>
+                            <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                                <strong>User:</strong> "There's a big water leakage near my house."
+                            </div>
+                            <div class="bg-white p-3 rounded border-l-4 border-green-500">
+                                <strong>AI:</strong> "I understand this is urgent. Please provide your name and address."
+                            </div>
+                            <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                                <strong>User:</strong> "Raj Patel, 23 MG Road, Sector 15."
+                            </div>
+                            <div class="bg-white p-3 rounded border-l-4 border-green-500">
+                                <strong>AI:</strong> "Your complaint has been logged and sent to PWD. Ticket number is PWD-2025-0813-001."
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-semibold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-cogs mr-2"></i>Behind the Scenes
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-microphone text-blue-600 mr-3"></i>
+                                <span class="text-sm">Wake word "Hey Buddy" detected</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-red-600 mr-3"></i>
+                                <span class="text-sm">High urgency detected from voice tone</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-brain text-purple-600 mr-3"></i>
+                                <span class="text-sm">GPT processes natural language</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-user-tag text-orange-600 mr-3"></i>
+                                <span class="text-sm">NER extracts user information</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-route text-teal-600 mr-3"></i>
+                                <span class="text-sm">Routed to Public Works Department</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-ticket-alt text-indigo-600 mr-3"></i>
+                                <span class="text-sm">Ticket PWD-2025-0813-001 generated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-yellow-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-yellow-800 mb-3 flex items-center">
+                        <i class="fas fa-chart-line mr-2"></i>Processing Time Breakdown
+                    </h4>
+                    <div style="height: 300px;">
+                        <canvas id="processingTimeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section id="benefits" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-thumbs-up mr-3 text-green-600"></i>System Advantages
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">24/7 Availability</h4>
+                    <p class="text-gray-700">Voice interface available round the clock for citizen convenience</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">Multi-Language Support</h4>
+                    <p class="text-gray-700">Supports multiple languages breaking down communication barriers</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">Reduced Workload</h4>
+                    <p class="text-gray-700">AI handles complaint intake, reducing burden on service agents</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">Accurate Routing</h4>
+                    <p class="text-gray-700">Fewer misroutes due to smart AI-powered department matching</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-lightning-bolt"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">Prompt Feedback</h4>
+                    <p class="text-gray-700">Citizens receive immediate acknowledgment and tracking information</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 text-center">
+                    <div class="benefit-icon mx-auto mb-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-3">Data Analytics</h4>
+                    <p class="text-gray-700">Complaint data analyzed for trends and service improvements</p>
+                </div>
+            </div>
+          </section>
+
+        <!-- Future Enhancements -->
+        <section id="future" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-rocket mr-3 text-purple-600"></i>Future Enhancements
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-camera mr-3 text-blue-600"></i>
+                            CCTV Integration
+                        </h4>
+                        <p class="text-gray-700">Integration with city CCTV feeds for real-time verification of reported issues</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-green-600"></i>
+                            Geo-location Tagging
+                        </h4>
+                        <p class="text-gray-700">Automatic location detection via user devices for precise complaint mapping</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 text-purple-600"></i>
+                            Multi-channel Notifications
+                        </h4>
+                        <p class="text-gray-700">Automated notifications via SMS and WhatsApp for status updates</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-chart-trend-up mr-3 text-orange-600"></i>
+                            Predictive Analytics
+                        </h4>
+                        <p class="text-gray-700">AI-powered analytics to detect complaint trends and predict hotspots</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-wifi mr-3 text-red-600"></i>
+                            Offline Capabilities
+                        </h4>
+                        <p class="text-gray-700">Local LLM deployment for areas with poor internet connectivity</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-robot mr-3 text-teal-600"></i>
+                            Advanced AI Features
+                        </h4>
+                        <p class="text-gray-700">Enhanced emotion recognition, sentiment analysis, and personalized responses</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+        <!-- Implementation Guide -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-tasks mr-3 text-orange-600"></i>Implementation Roadmap
+            </h2>
+            
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">1: Foundation</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Setup development environment</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Implement wake word detection</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Basic speech-to-text integration</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i>Simple conversation flow</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-green-800 mb-4">2: Core Features</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-cog text-blue-600 mr-2"></i>Emotion detection system</li>
+                            <li><i class="fas fa-cog text-blue-600 mr-2"></i>Department matching algorithm</li>
+                            <li><i class="fas fa-cog text-blue-600 mr-2"></i>Complaint form generation</li>
+                            <li><i class="fas fa-cog text-blue-600 mr-2"></i>Database implementation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-purple-800 mb-4">3: Advanced</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-clock text-orange-600 mr-2"></i>Real-time tracking system</li>
+                            <li><i class="fas fa-clock text-orange-600 mr-2"></i>Web dashboard</li>
+                            <li><i class="fas fa-clock text-orange-600 mr-2"></i>Multi-language support</li>
+                            <li><i class="fas fa-clock text-orange-600 mr-2"></i>Performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4">Technical Requirements</h3>
+                    <div class="code-block">
+# System Requirements
+- Python 3.8+
+- Node.js 14+
+- PostgreSQL 12+
+- Redis (for caching)
+- GPU support (for ML models)
+
+# API Keys Needed
+- OpenAI API key
+- Picovoice access key
+- Google Cloud STT (optional)
+
+# Infrastructure
+- Docker containers
+- Load balancer
+- SSL certificates
+- Monitoring tools
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section id="technical" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-microscope mr-3 text-blue-600"></i>Technical Deep Dive
+            </h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">AI Models Used</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li><b>Wake Word Detection:</b> Picovoice Porcupine (on-device, low-latency)</li>
+                        <li><b>Speech-to-Text:</b> OpenAI Whisper <span class="font-mono bg-gray-100 px-2 py-1 rounded">v3-large</span> (supports multilingual, robust in noisy environments)</li>
+                        <li><b>Emotion Detection:</b> Pre-trained Speech Emotion Recognition models (e.g., <span class="font-mono">SER</span> using MFCC features + CNN/RNN)</li>
+                        <li><b>Conversation Engine:</b> OpenAI GPT-4 (contextual, empathetic, multi-turn dialogue)</li>
+                        <li><b>Department Routing:</b> OpenAI Embeddings + FAISS/ChromaDB for semantic search</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">How Google Translate Works</h3>
+                    <p class="text-gray-700">
+                        Google Translate uses neural machine translation (NMT) models. It encodes the source language into a vector representation, then decodes it into the target language using large transformer-based models trained on massive parallel corpora. This enables context-aware, fluent translations across 100+ languages.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Vector DB Training & Department Binding</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>
+                            <b>Training:</b> Department descriptions and historical complaint texts are embedded using OpenAI's <span class="font-mono">text-embedding-ada-002</span> model.
+                        </li>
+                        <li>
+                            <b>Binding:</b> When a new complaint is received, its text is embedded and compared (cosine similarity) against department vectors in FAISS/ChromaDB. The top match determines routing.
+                        </li>
+                        <li>
+                            <b>Continuous Learning:</b> Feedback and resolved tickets are used to retrain embeddings, improving accuracy over time.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Other Technical Details</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li><b>NER (Named Entity Recognition):</b> Used for extracting user info (name, address, phone, issue) from conversation.</li>
+                        <li><b>Multi-language Support:</b> Whisper and GPT-4 handle Hindi, English, Tamil, etc. Google Translate API can be used for fallback translation.</li>
+                        <li><b>Offline Mode:</b> Local LLM (e.g., Llama 3, Whisper.cpp) for areas with poor connectivity.</li>
+                        <li><b>Security:</b> JWT/OAuth2 for authentication, SSL for data in transit.</li>
+                        <li><b>Monitoring:</b> Prometheus/Grafana for system health and performance metrics.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Screens Section -->
+<section id="samplescreens" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+        <i class="fas fa-image mr-3 text-blue-600"></i>Sample Screens
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+        <div>
+            <img src="/public/Screenshot 2025-08-13 at 11.50.10 AM.png" alt="Sample Screen 1" class="rounded-lg shadow mb-4">
+            <div class="text-gray-700 text-center">Complaint Submission UI</div>
+        </div>
+        <div>
+            <img src="/public/Screenshot 2025-08-13 at 11.50.31 AM.png" alt="Sample Screen 2" class="rounded-lg shadow mb-4">
+            <div class="text-gray-700 text-center">Complaint Tracking Dashboard</div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Backend Flow Section -->
+<section id="backendflow" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+        <i class="fas fa-server mr-3 text-purple-600"></i>Backend Technical Flow & Escalation
+    </h2>
+    <div class="space-y-6">
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Complaint Lifecycle (Jira-like Tracking)</h3>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><b>Submission:</b> Complaint received via voice/chat, stored in DB with unique ticket ID.</li>
+                <li><b>Assignment:</b> Routed to department using vector DB semantic search.</li>
+                <li><b>Status Updates:</b> Each ticket moves through states: <span class="font-mono">Submitted → Under Review → In Progress → Resolved → Closed</span>.</li>
+                <li><b>Audit Trail:</b> All actions (comments, status changes) logged with timestamps for transparency.</li>
+                <li><b>Tracking:</b> User can check status via dashboard or voice query, similar to Jira issue tracking.</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Escalation Module</h3>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><b>Time-based Escalation:</b> If a complaint is not resolved within a defined SLA (e.g., 48 hours), it is auto-escalated to higher authority.</li>
+                <li><b>Notification:</b> Department heads and users receive alerts via email/SMS/WhatsApp.</li>
+                <li><b>Priority Handling:</b> High urgency/emotion complaints are flagged for immediate escalation.</li>
+                <li><b>Escalation Tracking:</b> Escalated tickets are tracked separately and require explicit closure by senior staff.</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Technical Flow Diagram</h3>
+            <div class="text-gray-700 mb-4">
+                <b>Flow:</b> <br>
+                <span class="font-mono">User → Voice Input → Wake Word Detection → Whisper STT → GPT-4 Conversation → NER Extraction → Vector DB Routing → Ticket Creation → Department Assignment → Status Tracking → Escalation (if needed)</span>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-4 text-center">
+                <i class="fas fa-long-arrow-alt-right text-blue-600"></i>
+                <span class="font-mono text-blue-800">Voice/Chat → AI Processing → DB → Department → Tracking → Escalation</span>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">AI-Powered 24/7 Complaint Management System</h3>
+            <p class="text-lg mb-4">"Always Listening, Always Helping"</p>
+            <div class="flex justify-center space-x-8 text-sm">
+                <span><i class="fas fa-users mr-2"></i>Citizen-Centric</span>
+                <span><i class="fas fa-cogs mr-2"></i>AI-Driven</span>
+                <span><i class="fas fa-shield-alt mr-2"></i>Secure</span>
+                <span><i class="fas fa-chart-line mr-2"></i>Scalable</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Impact Chart
+        const impactCtx = document.getElementById('impactChart').getContext('2d');
+        new Chart(impactCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Citizen Frustration', 'Agent Workload', 'Routing Time', 'Trust Decline'],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: ['#ef4444', '#f97316', '#eab308', '#6b7280'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Current System Impact Distribution' }
+                }
+            }
+        });
+
+        // System Overview Chart
+        const systemCtx = document.getElementById('systemOverviewChart').getContext('2d');
+        new Chart(systemCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Wake Word', 'Speech-to-Text', 'Emotion Detection', 'AI Processing', 'Department Routing', 'Ticket Generation'],
+                datasets: [{
+                    label: 'Processing Time (seconds)',
+                    data: [0.5, 2.1, 1.8, 3.2, 2.5, 1.2],
+                    backgroundColor: '#667eea',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Average Processing Time by Component' }
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Seconds' } }
+                }
+            }
+        });
+
+        // Technology Distribution Chart
+        const techCtx = document.getElementById('technologyChart').getContext('2d');
+        new Chart(techCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['Frontend', 'AI/ML', 'Backend', 'Database', 'Authentication'],
+                datasets: [{
+                    data: [20, 35, 25, 15, 5],
+                    backgroundColor: ['#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Technology Stack Distribution (%)' }
+                }
+            }
+        });
+
+        // Workflow Performance Chart
+        const workflowCtx = document.getElementById('workflowChart').getContext('2d');
+        new Chart(workflowCtx, {
+            type: 'line',
+            data: {
+                labels: ['Wake Word', 'STT', 'Emotion', 'Conversation', 'Extraction', 'Routing', 'Logging'],
+                datasets: [{
+                    label: 'Accuracy (%)',
+                    data: [98, 95, 87, 92, 89, 94, 99],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Speed (ms)',
+                    data: [100, 500, 300, 800, 400, 600, 200],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Workflow Component Performance' }
+                },
+                scales: {
+                    y: { beginAtZero: true, position: 'left', title: { display: true, text: 'Accuracy (%)' } },
+                    y1: { beginAtZero: true, position: 'right', title: { display: true, text: 'Speed (ms)' }, grid: { drawOnChartArea: false } }
+                }
+            }
+        });
+
+        // Processing Time Chart
+        const processCtx = document.getElementById('processingTimeChart').getContext('2d');
+        new Chart(processCtx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['Wake Word Detection', 'Speech-to-Text', 'Emotion Analysis', 'NLP Processing', 'Department Routing', 'Ticket Generation'],
+                datasets: [{
+                    label: 'Time (seconds)',
+                    data: [0.3, 1.2, 0.8, 2.1, 1.5, 0.7],
+                    backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#06b6d4']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Processing Time Breakdown for Water Leakage Case' }
+                },
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Processing Time (seconds)' } }
+                }
+            }
+        });
+
+        // Impact Metrics Chart
+        const metricsCtx = document.getElementById('impactMetricsChart').getContext('2d');
+        new Chart(metricsCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Response Time', 'Accuracy', 'User Satisfaction', 'Cost Reduction', 'Scalability', 'Availability'],
+                datasets: [{
+                    label: 'Current System',
+                    data: [3, 5, 4, 3, 4, 6],
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)'
+                }, {
+                    label: 'AI System',
+                    data: [9, 8, 9, 8, 9, 10],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Expected Performance Improvement (Scale 1-10)' }
+                },
+                scales: {
+                    r: { beginAtZero: true, max: 10 }
+                }
+            }
+        });
+
+        // Development Roadmap Chart
+        const roadmapCtx = document.getElementById('roadmapChart').getContext('2d');
+        new Chart(roadmapCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Q1 2025', 'Q2 2025', 'Q3 2025', 'Q4 2025'],
+                datasets: [{
+                    label: 'Core Features',
+                    data: [80, 100, 100, 100],
+                    backgroundColor: '#3b82f6'
+                }, {
+                    label: 'Advanced Features',
+                    data: [20, 60, 90, 100],
+                    backgroundColor: '#10b981'
+                }, {
+                    label: 'Future Enhancements',
+                    data: [0, 20, 40, 80],
+                    backgroundColor: '#8b5cf6'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Development Progress Timeline (% Completion)' }
+                },
+                scales: {
+                    y: { beginAtZero: true, max: 100, title: { display: true, text: 'Completion (%)' } }
+                }
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

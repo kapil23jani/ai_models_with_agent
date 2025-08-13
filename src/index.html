@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pablo Designero – Bio Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f4f6fb;
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bio-card {
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 40px rgba(44,62,80,0.10);
+      max-width: 420px;
+      width: 100%;
+      padding: 48px 36px 36px 36px;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 2px 16px rgba(44,62,80,0.12);
+      margin-top: -90px;
+      background: #e0e7ef;
+    }
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #232946;
+      margin: 28px 0 6px 0;
+      letter-spacing: -0.5px;
+    }
+    .role {
+      color: #6366f1;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
+    }
+    .location {
+      color: #8b97b3;
+      font-size: 1rem;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .bio {
+      color: #4b5563;
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 18px;
+    }
+    .socials a {
+      color: #6366f1;
+      background: #f1f5ff;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 1px 4px rgba(99,102,241,0.06);
+    }
+    .socials a:hover {
+      background: #6366f1;
+      color: #fff;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #232946;
+      color: #fff;
+      font-weight: 700;
+      padding: 15px 36px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.13rem;
+      cursor: pointer;
+      margin-top: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+      letter-spacing: 0.2px;
+    }
+    .cta-btn:hover {
+      background: #6366f1;
+    }
+    @media (max-width: 600px) {
+      .bio-card {
+        padding: 32px 8px 24px 8px;
+        border-radius: 18px;
+      }
+      .avatar {
+        width: 80px;
+        height: 80px;
+        margin-top: -60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bio-card">
+    <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pablo Designero">
+    <div class="name">Pablo Designero</div>
+    <div class="role">UI/UX Designer</div>
+    <div class="location">
+      <svg width="18" height="18" fill="#8b97b3" viewBox="0 0 20 20" style="vertical-align:middle"><path d="M10 2a6 6 0 0 0-6 6c0 4.418 6 10 6 10s6-5.582 6-10a6 6 0 0 0-6-6zm0 8.5A2.5 2.5 0 1 1 10 5a2.5 2.5 0 0 1 0 5.5z"/></svg>
+      Barcelona, Spain
+    </div>
+    <div class="bio">
+      Designing delightful digital products at <b>Figma Studio</b>.<br>
+      Minimalist. Coffee lover. Pixel-perfectionist.<br>
+      Always exploring new creative horizons.
+    </div>
+    <div class="socials">
+      <a href="#" title="Twitter" aria-label="Twitter">
+        <!-- Twitter SVG -->
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M20 3.924a8.19 8.19 0 0 1-2.357.646A4.118 4.118 0 0 0 19.448 2.3a8.224 8.224 0 0 1-2.605.996A4.107 4.107 0 0 0 9.85 7.034a11.65 11.65 0 0 1-8.457-4.287a4.106 4.106 0 0 0 1.27 5.482A4.073 4.073 0 0 1 .8 7.15v.052a4.106 4.106 0 0 0 3.292 4.025a4.095 4.095 0 0 1-1.853.07a4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 0 17.542a11.616 11.616 0 0 0 6.29 1.844c7.547 0 11.675-6.155 11.675-11.49c0-.175-.004-.349-.012-.522A8.18 8.18 0 0 0 20 3.924z"/></svg>
+      </a>
+      <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M16.338 16.338h-2.771v-4.02c0-.958-.017-2.192-1.338-2.192c-1.34 0-1.545 1.047-1.545 2.127v4.085H7.913V8.333h2.662v1.09h.038c.37-.7 1.272-1.438 2.62-1.438c2.803 0 3.321 1.845 3.321 4.243v4.11zM5.337 7.242a1.605 1.605 0 1 1 0-3.21a1.605 1.605 0 0 1 0 3.21zm1.386 9.096H3.95V8.333h2.773v8.005zM18.333 0H1.667C.747 0 0 .747 0 1.667v16.666C0 19.253.747 20 1.667 20h16.666C19.253 20 20 19.253 20 18.333V1.667C20 .747 19.253 0 18.333 0z"/></svg>
+      </a>
+      <a href="#" title="Dribbble" aria-label="Dribbble">
+        <!-- Dribbble SVG -->
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10s10-4.477 10-10S15.523 0 10 0zm6.938 7.5a8.01 8.01 0 0 0-3.13-.457a20.13 20.13 0 0 0-1.04-2.37A8.03 8.03 0 0 1 16.938 7.5zM10 1.667a8.33 8.33 0 0 1 5.07 1.68a18.57 18.57 0 0 1 1.13 2.53a8.01 8.01 0 0 0-3.09-.45A19.9 19.9 0 0 0 10 2.5c-.37 0-.74.01-1.11.03A8.33 8.33 0 0 1 10 1.667zM8.96 2.67c-.36.02-.72.05-1.08.09a19.8 19.8 0 0 1 1.08-.09zm-2.19.36A8.03 8.03 0 0 0 3.06 7.5a8.01 8.01 0 0 1 3.13-.46a20.13 20.13 0 0 1 1.04-2.37zm-4.1 5.18A8.33 8.33 0 0 1 1.667 10c0 .37.02.74.05 1.1a19.8 19.8 0 0 1 2.37-1.04a8.01 8.01 0 0 1-.45-3.09zm.36 6.19c.02.36.05.72.09 1.08a19.8 19.8 0 0 1-.09-1.08zm.36 2.19a8.03 8.03 0 0 0 4.44 4.44a20.13 20.13 0 0 1-2.37-1.04a8.01 8.01 0 0 1-2.07-3.4zm5.18 4.1c.36.02.72.05 1.08.09a19.8 19.8 0 0 1-1.08-.09zm2.19-.36a8.03 8.03 0 0 0 4.44-4.44a20.13 20.13 0 0 1-2.37 1.04a8.01 8.01 0 0 1-2.07 3.4zm4.1-5.18c.02-.36.05-.72.09-1.08a19.8 19.8 0 0 1-.09 1.08zm.36-2.19a8.03 8.03 0 0 0-4.44-4.44a20.13 20.13 0 0 1 2.37 1.04a8.01 8.01 0 0 1 2.07 3.4z"/></svg>
+      </a>
+    </div>
+    <a href="#" class="cta-btn">Contact Pablo</a>
+  </div>
+</body>
+</html>

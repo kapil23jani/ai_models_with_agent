@@ -317,7 +317,7 @@ function App() {
                   <h2 className="text-xl font-bold text-blue-900 mb-4">
                     Conversation Transcript
                   </h2>
-                  <div style={{ maxHeight: 260, overflowY: "auto" }}>
+                  <div style={{ maxHeight: 560, overflowY: "auto" }}>
                     {transcript.length === 0 ? (
                       <div className="text-gray-500">No conversation yet.</div>
                     ) : (
